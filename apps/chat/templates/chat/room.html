@@ -4,9 +4,48 @@
 <head>
     <meta charset="utf-8"/>
     <title>Chat Room</title>
+    <style>
+        body{
+        background: #34323d;
+            color:white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+        }
+        #chat-log, #chat-message-input{
+            border-radius: 8px;
+            margin-top:10px;
+            border: 3px solid #0a7491;
+        }
+        #chat-log, #chat-message-input:focus {
+            outline: none !important;
+            border-color: #719ECE;
+            box-shadow: 0 0 10px #719ECE;
+        }
+        #chat-message-input{
+            height: 30px;
+        }
+        #chat-message-submit{
+            padding: 6px;
+            width: 150px;
+            border-radius: 8px;
+            border: none;
+        }
+        #chat-message-submit{
+            border: none;
+        }
+        #chat-message-submit:focus{
+            border: none;
+            outline: none;
+        }
+
+
+    </style>
 </head>
 <body>
-<textarea id="chat-log" cols="100" rows="20"></textarea><br>
+<textarea readonly id="chat-log" cols="100" rows="20"></textarea><br>
 <input id="chat-message-input" type="text" size="100"><br>
 <input id="chat-message-submit" type="button" value="Send">
 {{ room_name|json_script:"room-name" }}
@@ -45,6 +84,30 @@
             }));
             messageInputDom.value = '';
         };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </script>
 </body>
